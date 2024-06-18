@@ -1,11 +1,25 @@
-body{
-background-color: black;
-
-}.bruno {
-    color: aqua;
-    box-shadow: 0 4px 0 4px black;
+body {
     background-color: black;
-    text-decoration: none;
-    align-items: center;
+    color: white;
+}
 
+.bruno {
+    color: rgb(55, 37, 176);
+    position: relative;
+    margin-top: 10%;
+    left: 35%;
+    width: 25%;
+    background-color: #696969;
+    text-align: left;
+    border-radius: 10%;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(32, 192, 45);
+    cursor: pointer;
+    left: 40%;
+    text-align: center;
+    position: relative;
 }
