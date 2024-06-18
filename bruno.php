@@ -5,8 +5,9 @@ $bruno = time() + 30;
 // Verifica se o formulário foi enviado e se o nome foi preenchido
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['nome'])){
     // define o cookie com o nome do usuario
-    setcookie(username)
+    setcookie('nome', $_POST['nome'],$bruno);
+    $nome = $_POST['nome'];
 
-}
+}elseif
 
 ?>
