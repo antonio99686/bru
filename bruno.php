@@ -32,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['nome'])) {
 
 <body>
     <div class="bruno">
-        <?php if (isset($name)): ?>
-            <h1>Bem-vindo, <?php echo htmlspecialchars($name); ?>!</h1>
+        <?php if (isset($nome)): ?>
+            <h1>Bem-vindo, <?php echo htmlspecialchars($nome); ?>!</h1>
             <p>Estamos felizes em vê-lo novamente.</p>
         <?php endif; ?>
         <a href="index.php">Voltar</a>
