@@ -3,15 +3,15 @@
 $bruno = time() + 30;
 
 // Verifica se o formulário foi enviado e se o nome foi preenchido
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['nome'])){
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['nome'])) {
     // define o cookie com o nome do usuario
-    setcookie('nome', $_POST['nome'],$bruno);
+    setcookie('nome', $_POST['nome'], $bruno);
     $nome = $_POST['nome'];
 
-}elseif(isset($_COOKIE['nome'])) {
+} elseif (isset($_COOKIE['nome'])) {
     // Se o cookie já estiver definido, utiliza o valor do cookie
     $name = $_COOKIE['nome'];
-}else {
+} else {
     // Se o cookie não estiver definido e o formulário não foi enviado, redireciona para o formulário
     header('Location: index.php');
     exit();
@@ -21,13 +21,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['nome'])){
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>BRUNOOO</title>
 </head>
+
 <body>
-    
+    <div class="bruno">
+        <?php if (isset($name)): ?>
+            <h1>Bem-vindo, <?php echo htmlspecialchars($name); ?>!</h1>
+            <p>Estamos felizes em vê-lo novamente.</p>
+        <?php endif; ?>
+        <a href="index.php">Voltar</a>
+    </div>
 </body>
+
 </html>
